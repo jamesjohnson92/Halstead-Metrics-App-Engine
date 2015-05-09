@@ -1,0 +1,114 @@
+<html>
+
+<head>
+	<title>Metrics</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+
+<body>
+	<div class="well">
+		<span style="font-size:25px;" class="col-sm-offset-5">SOFTWARE METRICS</span>
+		<span class="pull-right" style="font-size:15px;">Welcome,<br> NAME</span>
+	</div>
+	
+	<div class="modal-body">
+		<div class="well">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#halstead" data-toggle="tab">HALSTEAD METRICS</a></li>
+				<li><a href="#loc" data-toggle="tab">LOC</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+			<!-- Halstead Metrics -->
+				<div class="tab-pane active in" id="halstead">
+					<form action="" method="" enctype="multipart/form-data" name="halstead">
+						<center>
+							<br>
+							<span class="col-sm-5 col-sm-offset-1"><input type="file"></span>
+							<span class="col-sm-5"><input type="submit" class="btn btn-primary" value="CALCULATE"></span><br>
+						</center>
+					</form> 
+					
+					<div class="well" style="margin-top:20px;margin-left:20px;background-color:#D5D5E6;">
+						<div class="row">
+							<div class="col-sm-4">
+								Number of distinct operators:<label>&#951;<sub>1</sub></label><br><br>
+								<input type="text" value="{{NoUniOperators}}" disabled><br><br>
+								Number of distinct operands:<label>&#951;<sub>2</sub></label><br><br>
+								<input type="text" value ="{{NoUniOperands}}" disabled><br><br>
+								Total number of operators:<label>N<sub>1</sub></label><br><br>
+							<input type="text" value="{{NoAllOperators}}"disabled><br><br>
+								Total number of operands:<label>N<sub>2</sub></label><br><br>
+								<input type="text" value="{{NoAllOperands}}"disabled><br><br>
+							</div>
+		
+							<div class="col-sm-4">
+								Program Vocabulary:<label>&#951;=&#951;<sub>1</sub>+&#951;<sub>1</sub></label><br><br>
+								<input type="text" value="{{Vocabulary}}" disabled><br><br>
+								Program length:<label>N=N<sub>1</sub>+N<sub>2</sub></label><br><br>
+								<input type="text" value="{{Length}}"disabled><br><br>		
+							</div>
+							
+							<div class="col-sm-4">
+								Volume <label>V = N x log<sub>2</sub>&#951;</label><br><br>
+								<input type="text" value="{{Volume}}"disabled><br><br>
+								Difficulty <label>D = &#951;<sub>1</sub>/2 x N<sub>2</sub>/&#951;<sub>2</sub></label><br><br>
+								<input type="text" value="{{Difficulty}}" disabled><br><br>
+								Effort <label>E = D x V</label><br><br>
+								<input type="text" value="{{Effort}}" disabled><br><br>
+							</div>
+							
+							<div class="row col-sm-12">
+								<div class="span4">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+										<div class="unit grey bloat">
+										<center>
+											<h3>Click here see operators and operands</h3>										
+										</center>
+										</div>
+									</a>
+								</div>       
+							</div>
+							
+							 <div class="accordion" id="accordion2">
+								<div class="accordion-group">
+									<div id="collapseOne" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<div class="expanded">
+												<div class="col-sm-12">
+													<center>
+														<label class="col-sm-2">Operators:</label>
+														<textarea style="resize:none;" cols="50" rows="10" class="col-sm-10"  disabled>{{Operators}}</textarea>
+														<label style="margin-top:10px;" class="col-sm-2">Operands:</label>
+														<textarea style="resize:none;margin-top:10px;" cols="50" rows="10" class="col-sm-10" disabled>{{Operands}}</textarea>
+													</center>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>						
+				</div>
+				<!-- LOC -->
+				<div class="tab-pane fade" id="loc">
+					<form action="" method="" enctype="multipart/form-data" name="loc">						
+						<center>
+							<br>
+							<span class="col-sm-5 col-sm-offset-1"><input type="file" name="file" required></span>
+							<span class="col-sm-5"><input type="submit" class="btn btn-primary" value="CALCULATE"></span><br>
+						</center>
+					</form> 
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script class="cssdeck" src="/js/jquery.min.js"></script>
+<script class="cssdeck" src="/js/bootstrap.min.js"></script>
+
+</html>

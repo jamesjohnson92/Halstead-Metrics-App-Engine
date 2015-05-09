@@ -1,0 +1,51 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+
+<body style="wdidth:100%;height:100%;">	
+	<div class="row" style="background-color:black;margin:0px;">
+	<center><h2 style="color:white;" class="col-sm-5 col-sm-offset-3">SOFTWARE METRICS</h2></center>
+	<span class="col-sm-2 pull-right">
+	<span class="pull-right " style="color:white;">WELCOME,<br>{{user}}</span>
+	</span>
+	</div><br><br>
+	<div class="navbar navbar-static-top">
+		<div class="navbar navHeaderCollapse" id="a">
+			<ul class="nav nav-justified">
+				<li><a href="/aboutmcs">ABOUT METRICS</a></li>						
+				<li><a href="/aboutgae">GOOGLE APP ENGINE</a></li>
+				<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">CALCULATE METRICS</a>
+							<ul class="dropdown-menu" >
+								<li> <a href="/uploadform">HALSTEAD METRICS</a></li>
+								<li> <a href="/line">LOC</a></li>								
+							</ul>
+						</li>
+				<li><a href="/logout">LOGOUT</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="modal-body">
+		<div class="well">
+				<!-- LOC -->
+				<center><span><h3>Lines Of Code</h3></span></center>
+				
+					<form action="/lineMetric" method="post" enctype="multipart/form-data" name="loc">						
+						<center>
+							<br>
+							<span class="col-sm-5 col-sm-offset-1"><input type="file" name="file" required></span>
+							<span class="col-sm-5"><input type="submit" class="btn btn-primary" value="CALCULATE"></span><br>
+						</center>
+					</form><br><br>					
+		</div>
+	</div>
+	
+</body>
+
+<script class="cssdeck" src="/js/jquery.min.js"></script>
+<script class="cssdeck" src="/js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,114 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+
+<body style="wdidth:100%;height:100%;">	
+	<div class="row" style="background-color:black;margin:0px;">
+	<center><h2 style="color:white;" class="col-sm-5 col-sm-offset-3">SOFTWARE METRICS</h2></center>
+	<span class="col-sm-2 pull-right">
+	<span class="pull-right " style="color:white;">WELCOME,<br>{{user}}</span>
+	</span>
+	</div><br><br>
+	<div class="navbar navbar-static-top">
+		<div class="navbar navHeaderCollapse" id="a">
+			<ul class="nav nav-justified">
+				<li><a href="/aboutmcs">ABOUT METRICS</a></li>						
+				<li><a href="/aboutgae">GOOGLE APP ENGINE</a></li>
+				<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">CALCULATE METRICS</a>
+							<ul class="dropdown-menu" >
+								<li> <a href="/uploadform">HALSTEAD METRICS</a></li>
+								<li> <a href="/line">LOC</a></li>								
+							</ul>
+						</li>
+				<li><a href="/logout">LOGOUT</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="modal-body">
+		<div class="well">
+			
+
+			<!-- Halstead Metrics -->
+				<div class="tab-pane active in" id="halstead">
+				<center><span><h3>HALSTEAD METRICS</h3></span></center>
+ 
+					
+					<div class="well" style="margin-top:20px;margin-left:20px;background-color:#D5D5E6;">
+						<div class="row">
+							<div class="col-sm-4">
+								Number of distinct operators:<label>&#951;<sub>1</sub></label><br><br>
+								<input type="text" value="{{NoUniOperators}}" disabled><br><br>
+								Number of distinct operands:<label>&#951;<sub>2</sub></label><br><br>
+								<input type="text" value ="{{NoUniOperands}}" disabled><br><br>
+								Total number of operators:<label>N<sub>1</sub></label><br><br>
+							<input type="text" value="{{NoAllOperators}}"disabled><br><br>
+								Total number of operands:<label>N<sub>2</sub></label><br><br>
+								<input type="text" value="{{NoAllOperands}}"disabled><br><br>
+							</div>
+		
+							<div class="col-sm-4">
+								Program Vocabulary:<label>&#951;=&#951;<sub>1</sub>+&#951;<sub>1</sub></label><br><br>
+								<input type="text" value="{{Vocabulary}}" disabled><br><br>
+								Program length:<label>N=N<sub>1</sub>+N<sub>2</sub></label><br><br>
+								<input type="text" value="{{Length}}"disabled><br><br>				
+							</div>
+							
+							<div class="col-sm-4">
+								Volume <label>V = N x log<sub>2</sub>&#951;</label><br><br>
+								<input type="text" value="{{Volume}}"disabled><br><br>
+								Difficulty <label>D = &#951;<sub>1</sub>/2 x N<sub>2</sub>/&#951;<sub>2</sub></label><br><br>
+								<input type="text" value="{{Difficulty}}" disabled><br><br>	
+								Effort <label>E = D x V</label><br><br>
+								<input type="text" value="{{Effort}}" disabled><br><br>
+							</div>
+							
+							<div class="row col-sm-12">
+								<div class="span4">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+										<div class="unit grey bloat">
+										<center>
+											<h4>Click here see operators and operands</h4>
+										</center>
+										</div>
+									</a>
+								</div>       
+							</div>
+							
+							 <div class="accordion" id="accordion2">
+								<div class="accordion-group">
+									<div id="collapseOne" class="accordion-body collapse">
+										<div class="accordion-inner">
+											<div class="expanded">
+												<div class="col-sm-12">
+													<center>
+														<label class="col-sm-2">Operators:</label>
+														<textarea style="resize:none;" cols="50" rows="10" class="col-sm-10"  disabled>{{Operators}}</textarea>
+														<label style="margin-top:10px;" class="col-sm-2">Operands:</label>
+														<textarea style="resize:none;margin-top:10px;" cols="50" rows="10" class="col-sm-10" disabled>{{Operands}}</textarea>
+													</center>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>						
+				</div>
+
+				
+
+		</div>
+	</div>
+</body>
+
+<script class="cssdeck" src="/js/jquery.min.js"></script>
+<script class="cssdeck" src="/js/bootstrap.min.js"></script>
+
+</html>

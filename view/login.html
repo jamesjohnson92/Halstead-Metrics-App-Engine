@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<title>Metrics</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+<body>
+<div class="row" style="background-color:black;"><center><h2 style="color:white;">SOFTWARE METRICS</h2></center></div>
+<div class="col-sm-5 col-sm-offset-4" id="loginModal">
+	
+	<div class="modal-body">
+		<div class="well">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+				<li><a href="#create" data-toggle="tab">Create Account</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+			<!-- Login -->
+				<div class="tab-pane active in" id="login">
+					<form class="form-horizontal" action='/login' method="POST">
+						<fieldset>
+							<br>						
+							<div class="control-group">
+								<!-- Username -->
+								<label class="control-label"  for="username">Username</label>
+								<div class="controls">
+									<input type="text" id="username" name="username" placeholder="username" class="input-xlarge" autocomplete="off">
+								</div>
+							</div>
+							<br>
+							<div class="control-group">
+								<!-- Password-->
+								<label class="control-label" for="password">Password</label>
+								<div class="controls">
+									<input type="password" id="password" name="password" placeholder="password" class="input-xlarge">
+								</div>
+							</div>
+							<br>
+							
+							<div class="control-group">
+								<!-- Button -->
+								<div class="controls">
+									<button class="btn btn-success">Login</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>                
+				</div>
+				<!-- Sign Up -->
+				<div class="tab-pane fade" id="create">
+					<form id="tab" action="/register" method="POST">
+						<br>
+						<label>Username</label><br>
+						<input type="text" name="username" value="" class="input-xlarge" autocomplete="off"><br><br>
+						<label>First Name</label><br>
+						<input type="text" name="firstname" value="" class="input-xlarge" autocomplete="off"><br><br>
+						<label>Last Name</label><br>
+						<input type="text" name="lastname" value="" class="input-xlarge" autocomplete="off"><br><br>
+						<label>Password</label><br>
+						<input id="pass" name="password" type="password" value="" class="input-xlarge"><br><br>
+						<label>Confirm Password</label><br>
+						<input id="con_pass" name="confirmpassword" type="password" value="" class="input-xlarge"><br><br>
+						<div>
+							<button class="btn btn-primary" onclick="validate(pass.value,con_pass.value);">Create Account</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<script>
+function validate(pass1,pass2)
+{
+  if (pass1!=pass2)
+    {
+    alert("passwords donot match");
+    }
+}
+</script>
+<script class="cssdeck" src="/js/jquery.min.js"></script>
+<script class="cssdeck" src="/js/bootstrap.min.js"></script>
+	</body>
+	</html>

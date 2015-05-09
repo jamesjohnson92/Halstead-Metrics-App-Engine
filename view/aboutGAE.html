@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>INTRODUCTION</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+
+<body style="wdidth:100%;height:100%;">	
+	<div class="row" style="background-color:black;margin:0px;">
+	<center><h2 style="color:white;" class="col-sm-5 col-sm-offset-3">SOFTWARE METRICS</h2></center>
+	<span class="col-sm-2 pull-right">
+        <span class="pull-right " style="color:white;">WELCOME,<br>{{user}}</span>
+	</span>
+	</div><br><br>
+	<div class="navbar navbar-static-top">
+		<div class="navbar navHeaderCollapse" id="a">
+			<ul class="nav nav-justified">
+				<li><a href="/aboutmcs">ABOUT METRICS</a></li>						
+				<li><a href="/aboutgae">GOOGLE APP ENGINE</a></li>
+				<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">CALCULATE METRICS</a>
+							<ul class="dropdown-menu" >
+								<li> <a href="/uploadform">HALSTEAD METRICS</a></li>
+								<li> <a href="/line">LOC</a></li>								
+							</ul>
+						</li>
+				<li><a href="/logout">LOGOUT</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="modal-body">
+		<div class="well row col-sm-8 col-sm-offset-2">
+			<center><h3><u>GOOGLE APP ENGINE</u></h3></center>
+			<div class="col-sm-12">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Google App Engine is a platform as a service cloud computing platform for developing and hosting web applications in Google-managed data centers. App Engine offers automatic scaling for web applications as the number of requests increases for an application, App Engine automatically allocates more resources for the web application to handle the additional demand. The service is free up to a certain level, after which users need to pay in order to access the service.
+</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Applications are sandboxed and run across multiple servers.</p>
+<p><label>Runtimes and framework:</label></p>
+<p>An App Engine application responds to web requests. A web request begins when a
+client, typically a user’s web browser, contacts the application with an HTTP request,
+such as to fetch a web page at a URL. When App Engine receives the request, it identifies
+the application from the domain name of the address, either an .appspot.com subdomain
+(provided for free with every app) or a subdomain of a custom domain name you
+have registered and set up with Google Apps. App Engine selects a server from many
+possible servers to handle the request, making its selection based on which server is
+most likely to provide a fast response. It then calls the application with the content of
+the HTTP request, receives the response data from the application, and returns the
+response to the client.</p>
+<p><label>Reliability and Support:</label></p>
+<p>App Engine is designed in such a way that it can sustain multiple datacenter outages without any downtime. This resilience to downtime is shown by the statistic that the High Replication Datastore saw 0% downtime over a period of a year.</p>
+<p>
+Paid support from Google engineers is offered as part of Premier Accounts. Free support is offered in the App Engine Groups and Stack Overflow, however assistance by a Google staff member is not guaranteed.</p>
+<p><label>Bulk downloading:</label></p>
+<p>SDK version 1.2.2 adds support for bulk downloads of data using Python. The open source Python projects gaebar, approcket and gawsh also allow users to download and backup App Engine data. No method for bulk downloading data from GAE using Java currently exists.</p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+<script class="cssdeck" src="/js/jquery.min.js"></script>
+<script class="cssdeck" src="/js/bootstrap.min.js"></script>
+
+</html>

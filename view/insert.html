@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+
+<body>
+	<div class="well">
+		<span style="font-size:25px;" class="col-sm-offset-5">SOFTWARE METRICS</span>
+		<span class="pull-right" style="font-size:15px;">Welcome,<br>{{user}}</span>
+	</div>
+	
+	<div class="modal-body">
+		<div class="well">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#halstead" data-toggle="tab">HALSTEAD METRICS</a></li>
+				<li><a href="#loc" data-toggle="tab">LOC</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+			<!-- Halstead Metrics -->
+				<div class="tab-pane active in" id="halstead">
+					 <form action="{{url}}" method="post" enctype="multipart/form-data" name="halstead">
+						<center>
+							<br>
+							<span class="col-sm-5 col-sm-offset-1"><input type="file" name ="file" required></span>
+							<span class="col-sm-5"><input type="submit" class="btn btn-primary" value="CALCULATE"></span><br>
+						</center>
+					</form> 
+				</div>
+				<!-- LOC -->
+				<div class="tab-pane fade" id="loc">
+				<form action="/lineMetric" method="post" enctype="multipart/form-data" name="loc">		
+						<center>
+							<br>
+							<span class="col-sm-5 col-sm-offset-1"><input type="file" name="file" required></span>
+							<span class="col-sm-5"><input type="submit" class="btn btn-primary" value="CALCULATE"></span><br>
+						</center>
+					</form> 
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+<script class="cssdeck" src="/js/jquery.min.js"></script>
+<script class="cssdeck" src="/js/bootstrap.min.js"></script>
+
+</html>
